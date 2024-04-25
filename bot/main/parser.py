@@ -51,7 +51,7 @@ def parse_results() -> list[Result]:
         result = Result(
             team_names=' vs '.join(map(get_text, html_result.find_all('td', {'class': 'team-cell'}))),
             tournament_name=get_text(html_result.find('span', {'class': 'event-name'})),
-            match_result=get_text(raw_results.find('td', {'class': 'result-score'})),
+            match_result=get_text(html_result.find('td', {'class': 'result-score'})),
             url_match=get_hltv_link(str(html_result.find('a', {'class': 'a-reset'}).get('href')))
         )
         results.append(result)

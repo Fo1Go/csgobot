@@ -8,10 +8,10 @@ class Article:
     url: str
 
     def __str__(self):
-        return f"Article({self.name}, {self.url}, {self.time_posted})"
+        return f"Article({self.name}, {self.url})"
 
     def __repr__(self):
-        return f"Article({self.name}, {self.url}, {self.time_posted})"
+        return f"Article({self.name}, {self.url})"
 
 
 @dataclass

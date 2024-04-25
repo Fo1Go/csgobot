@@ -51,7 +51,7 @@ __pypackages__/
 
 # Environments
 .env
-env_file
+env
 
 # Cython debug symbols
 cython_debug/
