@@ -8,9 +8,6 @@ Create Date: 2024-04-22 22:37:21.339233
 from typing import Sequence, Union
 from bot.models import User, Update
 from bot.utils.db import engine
-from alembic import op
-import sqlalchemy as sa
-
 
 # revision identifiers, used by Alembic.
 revision: str = '65e6ee5fb63d'

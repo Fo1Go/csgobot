@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 def get_parser_object(url: str) -> BeautifulSoup:
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) \
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (HTML, like Gecko) \
             Chrome/121.0.0.0 Safari/537.36',
     }
     html_content = requests.get(url=url, headers=headers).text.encode('utf-8')
@@ -38,7 +38,7 @@ def get_date(html_element: Tag | None | str) -> datetime | None:
     return datetime(year=year, month=month, day=day)
 
 
-def get_time(time: str, *args, date: datetime | None = None) -> datetime:
+def get_time(time: str, date: datetime | None = None) -> datetime:
     if date is None:
         date = datetime.now()
     hour, minute = map(int, time.split(':'))

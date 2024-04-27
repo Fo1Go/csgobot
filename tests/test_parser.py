@@ -1,6 +1,6 @@
 from bot.main.parser import parse_news, parse_matches, parse_results, parse_updates
 from bot.main.dataclasses import Result, Match, Article
-from bot.utils.parser import get_hltv_link, get_time, get_date, get_text
+from bot.utils.parser import get_hltv_link, get_time, get_text
 from bot.models import Update
 from datetime import datetime
 from mock import MockResponse
