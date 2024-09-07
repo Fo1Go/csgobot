@@ -24,6 +24,6 @@ async def on_startup():
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
-    loop.create_task(on_startup())
+    # loop.create_task(on_startup())
     loop.create_task(bot_object.start())
     loop.run_forever()
